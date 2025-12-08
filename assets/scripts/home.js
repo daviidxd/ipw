@@ -36,6 +36,10 @@ const fetchNextRace = async () => {
       "https://api.jolpi.ca/ergast/f1/current/next.json",
     );
     const data = await response.json();
+    if (!data.MRData.RaceTable.Races.length) {
+      localStorage.removeItem("nextEvent");
+      return null;
+    }
     const race = data.MRData.RaceTable.Races[0];
 
     const eventDate = new Date(`${race.date}T${race.time || "00:00:00"}`);
@@ -80,6 +84,10 @@ const loadNextRace = async () => {
   }
 
   const nextEvent = await fetchNextRace();
+  if (!nextEvent) {
+    document.querySelector(".next-event").innerHTML = "<h2>Fim da Temporada</h2>";
+    return;
+  }
   document.getElementById("event-name").textContent = nextEvent.name;
 };
 
@@ -91,6 +99,10 @@ const countdownElement = document.getElementById("countdown-event");
 
 const updateCountdown = () => {
   const nextEvent = JSON.parse(localStorage.getItem("nextEvent"));
+  if (!nextEvent) {
+    countdownElement.textContent = "";
+    return;
+  }
   const eventDate = new Date(nextEvent.date);
   const now = new Date();
   const difference = eventDate - now;
