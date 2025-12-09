@@ -1,4 +1,4 @@
-[
+const quizQuestions = [
   {
     "q": "Quem ganhou o WDC em 2025?",
     "a": "Lando Norris :("
@@ -19,4 +19,4 @@
     "q": "Em que ano a Red Bull Racing ganhou o seu primeiro campeonato de construtores?",
     "a": "2010"
   }
-]
+];

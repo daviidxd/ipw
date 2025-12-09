@@ -1,4 +1,4 @@
-import questions from "../quiz.json";
+let questions = quizQuestions || [];
 
 let currentQuestionIndex = 0;
 let score = 0;
