@@ -1,0 +1,118 @@
+#quiz-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+}
+
+#quiz-section h1 {
+  font-family: "BBH Sans Bogle", sans-serif;
+  font-size: 3em;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#quiz-container {
+  background: linear-gradient(145deg, #1a2e41, #0f1923);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid #db0a40;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#question-text {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  min-height: 60px;
+}
+
+#input-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+#answer-input {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1.1em;
+  width: 100%;
+  max-width: 400px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#answer-input:focus {
+  border-color: #db0a40;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+button {
+  padding: 12px 30px;
+  border-radius: 8px;
+  border: none;
+  background: #db0a40;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background: #ff1e5e;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#feedback-container {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+  display: none !important;
+}
+
+#feedback-text {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.correct {
+  color: #4caf50;
+}
+
+.incorrect {
+  color: #f44336;
+}
+
+#correct-answer-text {
+  color: #aaa;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+#score-container {
+  margin-top: 30px;
+  font-size: 1.2em;
+  opacity: 0.8;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}

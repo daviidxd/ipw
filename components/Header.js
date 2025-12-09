@@ -257,6 +257,7 @@ class Header extends HTMLElement {
 
   <nav class="navbar">
     <a href="./sobre.html" class="nav-btn">Sobre</a>
+    <a href="./quiz.html" class="nav-btn">Quiz</a>
     <a href="./contacto.html" class="nav-btn">Contacto</a>
   </nav>
 </header>

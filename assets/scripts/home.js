@@ -85,7 +85,8 @@ const loadNextRace = async () => {
 
   const nextEvent = await fetchNextRace();
   if (!nextEvent) {
-    document.querySelector(".next-event").innerHTML = "<h2>Fim da Temporada</h2>";
+    document.querySelector(".next-event").innerHTML =
+      "<h2>Fim da Temporada</h2>";
     return;
   }
   document.getElementById("event-name").textContent = nextEvent.name;

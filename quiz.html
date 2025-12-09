@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red Bull Racing - Quiz</title>
+    <link rel="stylesheet" href="./assets/styles/globals.css" />
+    <link rel="stylesheet" href="./assets/styles/quiz.css" />
+    <link rel="icon" href="./assets/images/favicon.png" />
+  </head>
+  <script src="./components/Header.js" type="text/javascript" defer></script>
+  <script src="./components/Footer.js" type="text/javascript" defer></script>
+  <script src="./assets/scripts/quiz.js" defer></script>
+  <body class="container">
+    <rb-header></rb-header>
+    <main>
+      <section id="quiz-section">
+        <h1>Red Bull Racing Quiz</h1>
+        <div
+          id="last-score-container"
+          style="
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #db0a40;
+            display: none;
+          "
+        >
+          Última pontuação: <span id="last-score"></span>
+        </div>
+        <div id="quiz-container">
+          <div id="question-container">
+            <h2 id="question-text"></h2>
+          </div>
+          <div id="input-container">
+            <input
+              type="text"
+              id="answer-input"
+              placeholder="Digite sua resposta..."
+              autocomplete="off"
+            />
+            <button id="submit-btn">Responder</button>
+          </div>
+          <div id="feedback-container" class="hidden">
+            <p id="feedback-text"></p>
+            <p id="correct-answer-text"></p>
+            <button id="next-btn">Próxima Pergunta</button>
+          </div>
+          <div id="score-container">Pontuação: <span id="score">0</span></div>
+        </div>
+      </section>
+    </main>
+    <rb-footer></rb-footer>
+  </body>
+</html>
